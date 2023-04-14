@@ -1,0 +1,13 @@
+[Unit]
+Description=Sitova aplikace - alfa 4
+After=network.target
+
+[Service]
+ExecStart=/usr/bin/python /usr/local/bin/sitova_aplikace/main.py
+User=nobody
+WorkingDirectory=/usr/local/bin/sitova_aplikace
+Restart=on-failure
+RestartSecs=5
+
+[Install]
+WantedBy=multi-user.target
